@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import { PrimaryButton } from '@components/ui/button';
 import React, { FunctionComponent } from 'react';
 
@@ -10,8 +12,12 @@ const Header: FunctionComponent = () => {
           <div>
             <nav>
               <ul className="flex items-center space-x-6">
-                <li>Home</li>
-                <li>About</li>
+                <Link href="/">
+                  <a>Home</a>
+                </Link>
+                <Link href="/new">
+                  <a>Criar</a>
+                </Link>
                 <li>
                   <PrimaryButton>Sign Up</PrimaryButton>
                 </li>
